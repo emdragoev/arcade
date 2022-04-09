@@ -5,7 +5,6 @@ from pygame.locals import *
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, score: int, lives: int):
-        #super(Player, self).__init__()
         super(Player, self).__init__()
         self.surface = pygame.image.load("spaceship.png").convert()
         self.surface.set_colorkey((255, 255, 255), RLEACCEL)
