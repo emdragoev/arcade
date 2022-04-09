@@ -24,8 +24,7 @@ pygame.time.set_timer(ADDASTEROID, 1250)
 
 # Creates custom user event
 ADDPOWERUP = pygame.USEREVENT + 2
-#pygame.time.set_timer(ADDPOWERUP, 20000)
-pygame.time.set_timer(ADDPOWERUP, 10000)
+pygame.time.set_timer(ADDPOWERUP, 20000)
 
 # Creates cooldown user event
 SHOOT_COOLDOWN = pygame.USEREVENT + 3
