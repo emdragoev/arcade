@@ -9,5 +9,4 @@ class Text():
 
     def draw(self, surface: pygame.display) -> None:
         font = pygame.font.Font("OpenSans-Regular.ttf", self.size)
-        img = font.render(self.txt, True, (255,255,255))
-        surface.blit(img, (self.x, self.y))
+        surface.blit(font.render(self.txt, True, (255,255,255)), (self.x, self.y))

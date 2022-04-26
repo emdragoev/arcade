@@ -12,8 +12,14 @@ class Asteroid(pygame.sprite.Sprite):
         self.rect = self.surface.get_rect(center=(random.randint(20, self.width - 20), 0))
         self.speed = random.randint(3,5)
 
-    def update(self, stats: Player) -> None:
+    def update(self) -> None:
         self.rect.move_ip(0, self.speed)
+
+    def freeze(self) -> None:
+        self.rect.move_ip(0, 0)
+    
+    def check_pos(self) -> bool:
         if self.rect.top > 550:
-            stats.lives -= 1
             self.kill()
+            return False
+        return True
